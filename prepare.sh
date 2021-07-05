@@ -8,6 +8,7 @@ rm VDV-GURS-RPE-DVK.geojson
 
 ogr2ogr VDV-GURS-RPE-DVK.geojson VDV-GURS-RPE.geojson -dialect sqlite \
  -sql "SELECT ST_Union(geometry),
+		dvk.OVK as ovk,
 		dvk.sedez as 'name'
 	FROM 'VDV' AS src
 		LEFT JOIN 'seznam-volisc-predcasno-zv1g.csv'.seznam-volisc-predcasno-zv1g AS dvk ON cast(src.VDV_ID as text)=dvk.OVK
