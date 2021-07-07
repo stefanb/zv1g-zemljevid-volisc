@@ -9,11 +9,13 @@ rm VDV-GURS-RPE-DVK.geojson
 ogr2ogr VDV-GURS-RPE-DVK.geojson VDV-GURS-RPE.geojson -dialect sqlite \
  -sql "SELECT ST_Union(geometry),
 		GROUP_CONCAT('- '|| dvk.OVK || ': ' || OVK_ime, char(10)) as ovk,
-		dvk.sedez as 'name'
+		dvk.sedez as 'name',
+		dvk.sedez_naslov as 'address',
+		dvk.sedez_kraj as 'city'
 	FROM 'VDV' AS src
 		LEFT JOIN 'seznam-volisc-predcasno-zv1g.csv'.seznam-volisc-predcasno-zv1g AS dvk ON cast(src.VDV_ID as text)=dvk.OVK
     WHERE src.ENOTA = 'VO' 
-    GROUP BY dvk.sedez"\
+    GROUP BY dvk.sedez, dvk.sedez_naslov, dvk.sedez_kraj"\
  -nln VDV-GURS-RPE-DVK
 
 echo "  done."
