@@ -1,4 +1,4 @@
-# Volišča za predčasno glasovanje na refeerendumu 
+# Zemljevid volišča za predčasno glasovanje na referendumu o zakonu o spremembah in dopolnitvah Zakona o vodah (ZV-1G)
 
 Interactive map / interaktivni zemljevid: https://umap.openstreetmap.fr/sl/map/volisca-za-predcasno-glasovanje-na-referendumu-o-z_634252
 
