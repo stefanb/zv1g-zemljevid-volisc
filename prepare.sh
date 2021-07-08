@@ -4,9 +4,9 @@
 
 #curl -o VDV-GURS-RPE.geojson https://raw.githubusercontent.com/stefanb/gurs-obcine/master/data/VDV.geojson
 
-rm VDV-GURS-RPE-DVK.geojson
+rm zv1g-volisca-predcasno.geojson
 
-ogr2ogr VDV-GURS-RPE-DVK.geojson VDV-GURS-RPE.geojson -dialect sqlite \
+ogr2ogr zv1g-volisca-predcasno.geojson VDV-GURS-RPE.geojson -dialect sqlite \
  -sql "SELECT ST_Union(geometry),
 		GROUP_CONCAT('- '|| dvk.OVK || ': ' || OVK_ime, char(10)) as ovk,
 		dvk.sedez as 'name',

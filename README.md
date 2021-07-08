@@ -2,7 +2,7 @@
 
 Interactive map / interaktivni zemljevid: https://umap.openstreetmap.fr/sl/map/volisca-za-predcasno-glasovanje-na-referendumu-o-z_634252
 
-GeoJson Result: [VDV-GURS-RPE-DVK.geojson](VDV-GURS-RPE-DVK.geojson)
+GeoJson Result: [zv1g-volisca-predcasno.geojson](zv1g-volisca-predcasno.geojson)
 
 ## Data sources
 
