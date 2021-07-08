@@ -23,7 +23,7 @@ rm zv1g-volisca-redno.geojson
 ogr2ogr zv1g-volisca-redno.geojson VDV-GURS-RPE.geojson -dialect sqlite \
  -sql "SELECT ST_Union(geometry),
 		src.VDV_UIME as 'name',
-		src.VDV_DJ as 'name_alt',
+		IFNULL(src.VDV_DJ, '') as 'name_alt',
 		SUM(src.POV_KM2) as 'pov_km2',
 		COUNT(src.VDV_ID) as 'vdv_count',
 		GROUP_CONCAT(src.VDV_ID, ', ') as vdv_ids
