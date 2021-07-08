@@ -1,8 +1,11 @@
-# Zemljevid volišča za predčasno glasovanje na referendumu o zakonu o spremembah in dopolnitvah Zakona o vodah (ZV-1G)
+# Zemljevid volišča za predčasno in redno glasovanje na referendumu o zakonu o spremembah in dopolnitvah Zakona o vodah (ZV-1G)
 
 Interactive map / interaktivni zemljevid: https://umap.openstreetmap.fr/sl/map/volisca-za-predcasno-glasovanje-na-referendumu-o-z_634252
 
-GeoJson Result: [zv1g-volisca-predcasno.geojson](zv1g-volisca-predcasno.geojson)
+GeoJson Result:
+
+* [zv1g-volisca-predcasno.geojson](zv1g-volisca-predcasno.geojson) (2021-07-06...2021-07-08)
+* [zv1g-volisca-redno.geojson](zv1g-volisca-redno.geojson) (2021-07-11)
 
 ## Data sources
 
