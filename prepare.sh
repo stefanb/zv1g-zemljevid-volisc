@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# curl -o seznam-volisc-predcasno-zv1g.pdf https://www.dvk-rs.si/files/files/Seznam-volisc-za-predcasno-glasovanje_stanje-18.6.2021.pdf
+# curl -o seznam-volisc-predcasno-zv1g.pdf https://www.dvk-rs.si/files/files/Seznam-volisc-za-predcasno-glasovanje_stanje-18.6.2021-POPRAVLJENA-VERZIJA.xls---List1-%281%29.pdf
 
 #curl -o VDV-GURS-RPE.geojson https://raw.githubusercontent.com/stefanb/gurs-obcine/master/data/VDV.geojson
 
