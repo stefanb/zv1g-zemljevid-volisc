@@ -25,13 +25,13 @@ ogr2ogr zv1g-volisca-redno.geojson VDV-GURS-RPE.geojson -dialect sqlite \
 		TRIM(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(VDV_UIME, '.', '. '), ',', ', '), ' U.', ' Ulica '), ' C.', ' Cesta '), ' Ul.', ' Ulica '), ' u.', ' ulica '), ' ul.', ' ulica '), ' c.', ' cesta '), ' d. o. o.', ' d.o.o.'), ' d. d.', ' d.d.'), ' s. p.', ' s.p.'), '. ,', '.,'), '   ', ' '), '  ', ' ')) as 'name',
 		IFNULL(VDV_DJ, '') as 'name_alt',
 		SUM(POV_KM2) as 'pov_km2',
-		COUNT(VDV_ID) as 'vdv_count',
-		GROUP_CONCAT(VDV_ID, ', ') as vdv_ids
+		COUNT(sifra) as 'sifre_count',
+		GROUP_CONCAT(sifra, ', ') as sifre_volisc
 	FROM (
-		SELECT VDV_ID, VDV_UIME, VDV_DJ, POV_KM2, geometry
+		SELECT N8 as sifra, VDV_UIME, VDV_DJ, POV_KM2, geometry
 		FROM 'VDV'
 		WHERE ENOTA = 'VD'
-		ORDER BY VDV_ID
+		ORDER BY sifra
 	)
     GROUP BY LOWER(name)"\
  -nln VDV-GURS-RPE-Regular
