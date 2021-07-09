@@ -35,6 +35,7 @@ ogr2ogr zv1g-volisca-redno.geojson VDV-GURS-RPE.geojson -dialect sqlite \
 	)
 	GROUP BY LOWER(name)
 	ORDER BY sifre_volisc"\
+ -lco RFC7946=YES -lco WRITE_BBOX=YES \
  -nln VDV-GURS-RPE-Regular
 
 echo "  done."
