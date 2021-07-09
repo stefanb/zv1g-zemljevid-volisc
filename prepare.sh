@@ -22,7 +22,7 @@ ogr2ogr zv1g-volisca-predcasno.geojson VDV-GURS-RPE.geojson -dialect sqlite \
 rm zv1g-volisca-redno.geojson
 ogr2ogr zv1g-volisca-redno.geojson VDV-GURS-RPE.geojson -dialect sqlite \
  -sql "SELECT ST_Union(geometry),
-		REPLACE(REPLACE(REPLACE(REPLACE(src.VDV_UIME, ' u.', ' ulica '), ' ul.', ' ulica '), ' c.', ' cesta '), '  ', ' ') as 'name',
+		TRIM(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(src.VDV_UIME, '.', '. '), ',', ', '), ' U.', ' Ulica '), ' C.', ' Cesta '), ' Ul.', ' Ulica '), ' u.', ' ulica '), ' ul.', ' ulica '), ' c.', ' cesta '), ' d. o. o.', ' d.o.o.'), ' d. d.', ' d.d.'), ' s. p.', ' s.p.'), '. ,', '.,'), '   ', ' '), '  ', ' ')) as 'name',
 		IFNULL(src.VDV_DJ, '') as 'name_alt',
 		SUM(src.POV_KM2) as 'pov_km2',
 		COUNT(src.VDV_ID) as 'vdv_count',
