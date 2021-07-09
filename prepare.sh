@@ -33,7 +33,8 @@ ogr2ogr zv1g-volisca-redno.geojson VDV-GURS-RPE.geojson -dialect sqlite \
 		WHERE ENOTA = 'VD'
 		ORDER BY sifra
 	)
-    GROUP BY LOWER(name)"\
+	GROUP BY LOWER(name)
+	ORDER BY sifre_volisc"\
  -nln VDV-GURS-RPE-Regular
 
 echo "  done."
