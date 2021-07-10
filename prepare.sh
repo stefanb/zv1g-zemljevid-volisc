@@ -28,8 +28,9 @@ ogr2ogr zv1g-volisca-redno.geojson VDV-GURS-RPE.geojson -dialect sqlite \
 		COUNT(sifra) as 'sifre_count',
 		GROUP_CONCAT(sifra, ', ') as sifre_volisc
 	FROM (
-		SELECT N8 as sifra, VDV_UIME, VDV_DJ, POV_KM2, geometry
+		SELECT N8 as sifra, dvk.IME_VOLISCA as VDV_UIME, VDV_DJ, POV_KM2, geometry
 		FROM 'VDV'
+			LEFT JOIN 'seznam-volisc-redno-zv1g.csv'.seznam-volisc-redno-zv1g AS dvk ON cast(N8 as text)=dvk.SIFRA
 		WHERE ENOTA = 'VD'
 		ORDER BY sifra
 	)
